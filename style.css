@@ -1,0 +1,159 @@
+@charset "utf-8";
+.max{
+  /* 800px以上は伸びない */
+  max-width: 800px;
+  margin: 0 auto;
+}
+header{
+  width: 100%;
+  height:72px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+header .logo-pc{
+  display: none;
+}
+/* 図形は問題なく拡大縮小が行われるため幅を相対指定 */
+header .logo-sp{
+  width: 30%;
+}
+header .logo-sp img,
+header .logo-pc img
+{
+  width: 100%;
+}
+/* 図形と違い文字は開業されて見切れてしまうため幅を絶対指定 */
+header a{
+  width: 128px;
+  color:rgb(255,255,255);
+  background: rgb(48,158,0);
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  /* aの高さ-pading */
+  line-height: 24px;
+}
+
+.top-page{
+  background-color: rgb(152,230,255);
+  background-image:url(bg.png) ;
+  /* x軸では繰り返す、Y軸では繰り返さない */
+  background-repeat:repeat-x;
+  background-position:center bottom ;
+  text-align: center;
+}
+.top-page .top-intro{
+  padding-top: 64px;
+}
+.top-page h2{
+  font-size: 24px;
+}
+.top-page p{
+  font-size: 16px;
+  line-height: 30px;
+}
+.top-page a{
+  display: inline-block;
+  width: 128px;
+  color:rgb(255,255,255);
+  background: rgb(48,158,0);
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  line-height: 24px;
+  margin-top: 64px;
+}
+.top-page .img{
+  margin-top: 64px;
+}
+.top-page .app{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+.fetures{
+  text-align: center;
+  padding: 64px 32px;
+}
+.fetures h1{
+  font-size: 24px;
+}
+.feturer1,
+.feturer2,
+.feturer3{
+  margin-top: 64px;
+}
+.fetures img{
+  height: 200px;
+  width: 300px;
+}
+.fetures .f1-ex,
+.fetures .f2-ex,
+.fetures .f3-ex{
+  text-align: left;
+}
+.fetures h2,
+.fetures p{
+  margin-top: 16px;
+}
+.fetures h2{
+  font-size: 20px;
+}
+.fetures p{
+  font-size: 16px;
+  line-height: 24px;
+}
+footer{
+  background-color:rgb(49,52,53) ;
+  height:152px ;
+  text-align: center;
+}
+footer p{
+  line-height: 152px;
+  color: white;
+}
+
+@media(min-width:600px){
+  header .logo-pc{
+    display: block;
+    height: 32px;
+    width: 284px;
+  }
+  header .logo-sp{
+    display: none;
+  }
+  .max-container{
+    display: flex;
+    padding-top: 64px;
+  }
+  .top-page .left-side{
+    width: 50%;
+  }
+  .top-page .top-intro{
+    margin-top: 0;
+  }
+  .top-page a{
+    margin-top: 32px;
+  }
+  .top-page .img{
+    width: 50%;
+    margin-top: 0;
+  }
+  .top-page .app{
+    width: 300px;
+    height: 312px;
+  }
+  .fetures .feturer1,
+  .fetures .feturer2,
+  .fetures .feturer3{
+    display: flex;
+    gap: 16px;
+  }
+  .fetures .feturer2 .f2-ex{
+    order: -1;
+  }
+}
